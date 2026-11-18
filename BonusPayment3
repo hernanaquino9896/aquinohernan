@@ -1,0 +1,22 @@
+package helloworld.control;
+
+public class BonusPayment3 {
+
+    public static void main(String[] args) {
+
+        // Declare variables
+        int itemsSold = 4;
+        int totalValue = 500;
+
+        // Using OR (||) operator
+        if (itemsSold > 3 || totalValue > 1000) {
+
+            System.out.println("Received Php100 bonus");
+
+        } else {
+
+            System.out.println("No bonus for you");
+
+        }
+    }
+}

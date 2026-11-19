@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        
+        System.out.println("      MARY'S LAUNDRY SHOP");
+        System.out.println("Owner: Hernan Joyce Aquino");
+
+      
+        System.out.print("\nCustomer Name: Mariane Aquino ");
+        String name = input.nextLine();
+
+      
+        System.out.println("\nSELECT LAUNDRY SERVICE: Wash And Dry ");
+        System.out.println("[1] Wash - P35/kg");
+        System.out.println("[2] Wash and Dry - P45/kg");
+        System.out.println("[3] Wash, Dry and Fold - P50/kg");
+        System.out.println("[4] Dry Cleaning - P80/kg");
+
+        System.out.print("\n Wash And dry: ");
+        int choice = input.nextInt();
+
+        String service = "";
+        double rate = 0;
+
+        switch (choice) {
+            case 1:
+                service = "Wash";
+                rate = 35;
+                break;
+            case 2:
+                service = "Wash and Dry";
+                rate = 45;
+                break;
+            case 3:
+                service = "Wash, Dry and Fold";
+                rate = 50;
+                break;
+            case 4:
+                service = "Dry Cleaning";
+                rate = 80;
+                break;
+            default:
+                System.out.println("Invalid Service!");
+                input.close();
+                return;
+        }
+
+    
+        System.out.print("Laundry Weight (kg): 5kg ");
+        double weight = input.nextDouble();
+
+        
+        double total = rate * weight;
+
+    
+        System.out.println("       LAUNDRY RECEIPT");
+        
+        System.out.println("Customer: " + name);
+        System.out.println("Service: " + service);
+        System.out.println("Weight: " + weight + " kg");
+        System.out.println("Rate: P" + rate + "/kg");
+        
+        System.out.printf("Total Bill: P%.2f%n", total);
+        
+        System.out.println("Thank you for choosing");
+        System.out.println("MARY'S LAUNDRY SHOP!");
+        
+
+       input.close();
+    }
+}
